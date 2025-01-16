@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Box icons -->
+    <script
+      src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+      defer
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+
+    <!-- Title -->
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="formWrapper">
+      <div class="formSide">
+        <a href="#" title="logo"><img src="" alt="" class="logo" /></a>
+        <form class="myForm">
+          <div class="formWelcomeRow">
+            <h1>Create your account</h1>
+          </div>
+          <div class="socialsRow">
+            <a href="#" title="Use Google">
+              <img src="/img/logoGoogle.png" alt="" />
+            </a>
+            <a href="#" title="Use Apple">
+              <img src="/img/logoApple.png" alt="" />
+            </a>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="divider">
+            <div class="dividerLine">
+              Or
+              <div class="dividerLibe"></div>
+            </div>
+          </div>
+          <div class="textField">
+            <label for="email">
+              Email:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="off"
+                placeholder="Your Email"
+                required
+              />
+              <box-icon name="at" animation="tada"></box-icon>
+            </label>
+          </div>
+          <div class="textField">
+            <label for="password">
+              Password:
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Your Password"
+                title="Minimum 8 characters at least 1 Alphabet and 1 Number"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                required
+              />
+              <box-icon name="lock-open" type="solid"></box-icon>
+            </label>
+          </div>
+          <button type="submit" class="myFormButton">Login</button>
+          <div class="myFormActions">
+            <a href="#" title="Rest Password"> Reset Password </a>
+            <a href="#" title="Create Account"> Already have an account? </a>
+          </div>
+        </form>
+      </div>
+      <div class="infoSide">
+        <img src="" alt="Mock Up" class="mockUp" />
+      </div>
+    </div>
+  </body>
+</html>
