@@ -1,0 +1,137 @@
+/* Imports */
+:root {
+  --primary: #6843ff;
+  --primary-light: #7e5fff;
+  --violet-light: #8492fd;
+  --secondary: #101010;
+  --info-side-background: #ad4ef5;
+}
+
+body {
+  font-size: 16px;
+  background: var(--info-side-background);
+  font-family: Mulish, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.socialsRow {
+  display: flex;
+  gap: 16px;
+}
+
+.socialsRow img {
+  width: 24px;
+  height: 24px;
+}
+
+.socialsRow > a {
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #323760;
+  border: 1px solid var(--primary-light);
+  font-weight: 700;
+}
+
+.socialsRow > a:hover {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  color: var(--secondary);
+  gap: 16px;
+  align-items: center;
+}
+
+.dividerLine {
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary);
+  opacity: 0.2;
+}
+
+.formWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  max-width: 1200px;
+}
+
+.formSide {
+  padding: 186px 32px 48px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: white;
+}
+
+.infoSide {
+  height: 100vh;
+  padding: 248px 12px 8px 12px;
+  color: #40183d;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(
+    92.15deg,
+    var(--violet-light) 30.13%,
+    var(--info-side-background) 95.43%
+  );
+}
+
+.infoSide img {
+  max-width: 360px;
+  z-index: 1;
+}
+
+.textField svg {
+  position: absolute;
+  right: -2px;
+  bottom: -4px;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.textField input:focus + svg {
+  stroke: var(--primary);
+}
+
+.textField label {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  z-index: 10;
+}
+
+@media (max-width: 840px) {
+  .formWrapper {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .infoSide {
+    display: none;
+    padding: 48px 48px 48px 32px;
+  }
+}
